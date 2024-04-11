@@ -1,152 +1,191 @@
-.abrir{
-    background-image: linear-gradient( to right, #556b2f, #a0cc54, #a0cc54, #556b2f );
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #353535;
-    top: 0px;
-    left: 0px;
-    
+body {
+  overflow: hidden;
 }
 
-.abrir button{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: none;
-    background: transparent;
-    color: #000000;
-    font-family: cursive;
-    font-size: 25px;
-    font-weight: 550;
+body:has(.ativo) {
+  overflow: auto;
 }
 
-.abrir.oculto{
-    display: none;
+.abrir {
+  background-image: linear-gradient(to right, #556b2f, #a0cc54, #a0cc54, #556b2f);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #353535;
+  top: 0px;
+  left: 0px;
+
+}
+
+.abrir button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  background: transparent;
+  color: #000000;
+  font-family: cursive;
+  font-size: 25px;
+  font-weight: 550;
+  cursor: pointer;
 }
 
 
-.js .home{
-    opacity: 0;
+.abrir.oculto {
+  display: none;
 }
 
-.home.ativo{
-    opacity: 1;
-    transform: none;
-    transition: transform 0.8s, opacity 1.5s;
-    background-image: linear-gradient( to right, #556b2f, #a0cc54, #a0cc54, #556b2f );
-}
-.home {
-    padding-top: 150px;
 
+.js .home {
+  opacity: 0;
+}
+
+.home.ativo {
+  opacity: 1;
+  transform: none;
+  transition: transform 0.8s, opacity 1.5s;
+  background-color: #fff;
+}
+
+.containerImgCasal {
+  position: relative;
+}
+
+.beforeImg {
+  position: absolute;
+  bottom: 165px;
+  left: 0;
+  width: 100%;
+  height: 240px;
+  background: linear-gradient(to top, #fff, transparent);
+  z-index: 200;
+}
+
+
+.imgVersiculo {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.imgVersiculo p{
+  width: 302px;
+  line-height: 33px;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.4px;
+  color: #0a3f17;
 }
 
 .nomes {
-    padding-top: 20px;
-    padding-bottom: 150px;
-    color: #0a3f17;
-    text-align: center;
+  padding-top: 20px;
+  padding-bottom: 150px;
+  color: #0a3f17;
+  text-align: center;
 }
 
-.hora{
-    text-align: center;
+.hora {
+  text-align: center;
 }
 
 .hora p:first-child {
-    padding-bottom: 40px;
-    font-size: 1rem;
-    font-weight: 900;
-    color: #ffffff ;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
+  padding-bottom: 40px;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #ffffff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
 .hora p:last-child {
-    color: rgb(193, 247, 196);
+  color: rgb(193, 247, 196);
   background-color: #193b11;
   font: 2.5rem "HighSpirited", sans-serif;
   border-radius: 5px;
 }
 
 .links {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    color: #000000;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #000000;
 }
 
 .flex {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .flex p {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
-footer h3{
-    color: #000000;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    font-style: oblique;
-    text-align: center;
+footer h3 {
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-style: oblique;
+  text-align: center;
 }
-.iconCOnvite{
-    width: 70px;
-    height: 70px;
+
+.iconCOnvite {
+  width: 70px;
+  height: 70px;
 }
 
 /* Estilos para telas com largura máxima de 412px */
 @media (max-width: 412px) {
-    .abrir {
-      padding: 10px; /* Reduza o espaço interno */
-    }
-  
-    .abrir .nomes {
-      font-size: 18px; /* Reduza o tamanho da fonte */
-    }
-  
-    .abrir button {
-      font-size: 16px; /* Reduza o tamanho da fonte do botão */
-    }
-  
-    .home {
-      padding-top: 10px; /* Reduza o espaço superior */
-    }
-  
-    .hora p:first-child {
-      font-size: 0.8rem; /* Reduza o tamanho da fonte do primeiro parágrafo da hora */
-    }
-  
-    .hora p:last-child {
-      font-size: 1.6rem; /* Reduza o tamanho da fonte do segundo parágrafo da hora */
-    }
-  
-    .links {
-      padding-top: 10px; /* Reduza o espaço superior */
-      padding-bottom: 10px; /* Reduza o espaço inferior */
-      flex-direction: column; /* Empilhe os links verticalmente */
-    }
-  
-    .flex p {
-      padding-top: 5px; /* Reduza o espaço superior entre os links */
-    }
-  
-    .iconCOnvite {
-      width: 40px; /* Reduza o tamanho do ícone do convite */
-      height: 40px; /* Reduza o tamanho do ícone do convite */
-    }
+
+  .abrir .nomes {
+    font-size: 74px;
+    /* Reduza o tamanho da fonte */
   }
- 
-  
+
+  .abrir button {
+    font-size: 16px;
+    /* Reduza o tamanho da fonte do botão */
+  }
+
+  .hora p:first-child {
+    font-size: 0.8rem;
+    /* Reduza o tamanho da fonte do primeiro parágrafo da hora */
+  }
+
+  .hora p:last-child {
+    font-size: 1.6rem;
+    /* Reduza o tamanho da fonte do segundo parágrafo da hora */
+  }
+
+  .links {
+    padding-top: 10px;
+    /* Reduza o espaço superior */
+    padding-bottom: 10px;
+    /* Reduza o espaço inferior */
+    flex-direction: column;
+    /* Empilhe os links verticalmente */
+  }
+
+  .flex p {
+    padding-top: 5px;
+    /* Reduza o espaço superior entre os links */
+  }
+
+  .iconCOnvite {
+    width: 40px;
+    /* Reduza o tamanho do ícone do convite */
+    height: 40px;
+    /* Reduza o tamanho do ícone do convite */
+  }
+}

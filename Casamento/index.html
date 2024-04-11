@@ -13,28 +13,49 @@
 <script>
     document.documentElement.classList.add("js");
 </script>
+
 <div class="abrir">
-    <p class="font-2 nomes" data-anime="200">Thaís & Samuel</p>
-    <button class="frase font-1-400 btn-js" onclick="playaudio(), removeModal()" data-anime="600"><img class="iconCOnvite" src="img/convite2.png" >abrir convite</button>
-    
+    <div>
+        <img src="img/floresCiruclo.png" alt="circulo">
+        <p class="font-2 nomes" data-anime="200">Thaís & Samuel</p>
+    </div>
+
+    <button class="frase font-1-400 btn-js" onclick="playaudio(), removeModal()" data-anime="600">
+        <img class="iconCOnvite" src="img/convite2.png">
+        abrir convite
+    </button>
+
 </div>
+
 <body>
-    <div class="home"> 
+    <div class="home">
         <div class="informacoes">
-            <p class="font-2 nomes">Thaís & Samuel</p>
-             <div class="hora">
+            <div class="containerImgCasal">
+                <img class="imgCasal" src="./img/parceiros-de-visao-lateral-de-maos-dadas.jpg" alt="">
+
+                <span class="beforeImg"></span>
+
+                <div class="imgVersiculo">
+                    <p>Foi o Senhor que fez isso e é maravilhoso aos nossos olhos <br> (Salmos 118:2-3)</p>
+                </div>
+            </div>
+
+
+            <div class="hora">
                 <p class="font-1-300">Convidam para a celebração<br> de seu casamento.</p>
                 <p class="font-1-400 ">03 de Agosto de 2024, ÀS 15h00</p>
             </div>
+
             <div class="links font-1-400-s">
                 <div class="local flex">
                     <a href="https://goo.gl/maps/skk9x8KArD7WVnvh9" target="_blank">
-                    <i class="fa-solid fa-map-location-dot fa-beat-fade fa-2xl"></i>
-                    <br>
-                    
+                        <i class="fa-solid fa-map-location-dot fa-beat-fade fa-2xl"></i>
+                        <br>
+
                         <p>Local<br>Cerimônia</p>
                     </a>
                 </div>
+
                 <div class="confirmar flex">
                     <a href="https://api.whatsapp.com/send?phone=5531988625269&text=Ol%C3%A1%2C%20presen%C3%A7a%20confirmada!"
                         target="_blank">
@@ -43,6 +64,7 @@
                         <p>Confimar <br>Presença</p>
                     </a>
                 </div>
+
                 <div class="lista flex">
                     <a href="" target="_blank">
                         <i class="fa-solid fa-gift fa-flip fa-2xl" style="color: #0a0a0a;"></i>
@@ -58,44 +80,44 @@
             <h2 class="font-1-400-m">Local da cerimônia </h2>
             <p class="size">R. Maria Alvarenga Magalhães, 152 - Central Park</p>
             <p class="size">Vespasiano - MG</p>
-            <a class="size"
-                href="https://goo.gl/maps/skk9x8KArD7WVnvh9"
-                target="_blank">clique aqui para ver o trajeto!</a>
-            <p class="size-b" id="presenca">Contamos com sua presença !</p> 
+            <a class="size" href="https://goo.gl/maps/skk9x8KArD7WVnvh9" target="_blank">clique aqui para ver o
+                trajeto!</a>
+            <p class="size-b" id="presenca">Contamos com sua presença !</p>
         </div>
         <img src="img/logoCasamento2.png" id="logo">
     </div>
-<audio src="audio/musica.mp3" id="audio">
+    <audio src="audio/musica.mp3" id="audio">
 
-</audio>
+    </audio>
 
-<footer>
-    <h3> Site desenvolvido por RG</h3>
-    <font-awesome-icon :icon="['fal', 'copyright']" spin size="2xl" />
-</footer>
+    <footer>
+        <h3> Site desenvolvido por RG</h3>
+        <font-awesome-icon :icon="['fal', 'copyright']" spin size="2xl" />
+    </footer>
 
 </body>
 <script>
 
-const btn = document.querySelector('.btn-js');
-btn.addEventListener("click", showModal);
+    const btn = document.querySelector('.btn-js');
+    btn.addEventListener("click", showModal);
 
-function playaudio(){
-    const audio = document.querySelector("#audio");
-    audio.play();
-}
+    function playaudio() {
+        const audio = document.querySelector("#audio");
+        audio.play();
+    }
 
-function removeModal(){
-    const modal =  document.querySelector(".abrir");;
-    modal.classList.add("oculto");
-}
+    function removeModal() {
+        const modal = document.querySelector(".abrir");;
+        modal.classList.add("oculto");
+    }
 
-function showModal(){
-    const home = document.querySelector(".home");
-    home.classList.add("ativo");
-}
+    function showModal() {
+        const home = document.querySelector(".home");
+        home.classList.add("ativo");
+    }
 
 
 </script>
 <script src="simple-anime.js"></script>
+
 </html>
