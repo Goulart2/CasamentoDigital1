@@ -17,13 +17,18 @@
 <div class="abrir">
     <div>
         <img src="img/floresCiruclo.png" alt="circulo">
-        <p class="font-2 nomes" data-anime="200">Thaís & Samuel</p>
+        <p class="font-Hs-sm nomes" data-anime="200">Thaís & Samuel</p>
     </div>
 
-    <button class="frase font-1-400 btn-js" onclick="playaudio(), removeModal()" data-anime="600">
-        <img class="iconCOnvite" src="img/convite2.png">
-        abrir convite
-    </button>
+    <div class="bntConvite" onclick="playaudio(), removeModal()">
+        <button class="frase font-1-400 btn-js" data-anime="600">
+            <img class="iconConvite" src="img/convite-de-casamento.png">
+        </button>
+
+        <p>
+            abrir convite
+        </p>
+    </div>
 
 </div>
 
@@ -35,40 +40,46 @@
 
                 <span class="beforeImg"></span>
 
-                <div class="imgVersiculo">
-                    <p>Foi o Senhor que fez isso e é maravilhoso aos nossos olhos <br> (Salmos 118:2-3)</p>
-                </div>
+            </div>
+            <div class="imgVersiculo">
+                <p>Foi o Senhor que fez isso e é maravilhoso aos nossos olhos <br> (Salmos 118:2-3)</p>
             </div>
 
 
-            <div class="hora">
+            <div class="c_textInformation">
+                <p class="font-Hs-sm">Thaís & Samuel</p>
                 <p class="font-1-300">Convidam para a celebração<br> de seu casamento.</p>
-                <p class="font-1-400 ">03 de Agosto de 2024, ÀS 15h00</p>
+                <p class="informationDate">03 de Agosto de 2024, às 15:00h</p>
             </div>
 
             <div class="links font-1-400-s">
-                <div class="local flex">
+                <div class="local linkContents">
                     <a href="https://goo.gl/maps/skk9x8KArD7WVnvh9" target="_blank">
-                        <i class="fa-solid fa-map-location-dot fa-beat-fade fa-2xl"></i>
-                        <br>
+                        <div>
+                            <img src="./img/placeholder.png" alt="icon-local">
+                        </div>
 
                         <p>Local<br>Cerimônia</p>
                     </a>
                 </div>
 
-                <div class="confirmar flex">
+                <div class="confirmar linkContents">
                     <a href="https://api.whatsapp.com/send?phone=5531988625269&text=Ol%C3%A1%2C%20presen%C3%A7a%20confirmada!"
                         target="_blank">
-                        <i class="fa-brands fa-whatsapp fa-shake fa-2xl"></i>
-                        <br>
+                        <div>
+                            <img src="./img/aceitar.png" alt="icon-local">
+                        </div>
+
                         <p>Confimar <br>Presença</p>
                     </a>
                 </div>
 
-                <div class="lista flex">
+                <div class="lista linkContents">
                     <a href="" target="_blank">
-                        <i class="fa-solid fa-gift fa-flip fa-2xl" style="color: #0a0a0a;"></i>
-                        <br>
+                        <div>
+                            <img src="./img/caixa-de-presente.png" alt="icon-local">
+                        </div>
+
                         <p>Lista de<br> Presentes</p>
                     </a>
                 </div>
@@ -82,9 +93,9 @@
             <p class="size">Vespasiano - MG</p>
             <a class="size" href="https://goo.gl/maps/skk9x8KArD7WVnvh9" target="_blank">clique aqui para ver o
                 trajeto!</a>
-            <p class="size-b" id="presenca">Contamos com sua presença !</p>
+            <p class="size-b" id="presenca">Contamos com sua presença!!</p>
         </div>
-        <img src="img/logoCasamento2.png" id="logo">
+        <!-- <img src="img/logoCasamento2.png" id="logo"> -->
     </div>
     <audio src="audio/musica.mp3" id="audio">
 

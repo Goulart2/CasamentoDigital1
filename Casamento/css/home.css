@@ -7,34 +7,51 @@ body:has(.ativo) {
 }
 
 .abrir {
-  background-image: linear-gradient(to right, #556b2f, #a0cc54, #a0cc54, #556b2f);
+  background: rgb(255, 255, 255);
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 57%, rgba(231, 245, 222, 1) 78%, rgba(213, 240, 196, 1) 97%);
   position: fixed;
+  left: 0px;
+  top: 0px;
+
   width: 100vw;
   height: 100vh;
-  z-index: 2;
+  z-index: 200;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #353535;
-  top: 0px;
-  left: 0px;
 
+  color: #353535;
+  overflow: auto;
 }
 
-.abrir button {
+
+.bntConvite {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: none;
-  background: transparent;
-  color: #000000;
-  font-family: cursive;
-  font-size: 25px;
-  font-weight: 550;
-  cursor: pointer;
+  gap: 10px;
 }
 
+.bntConvite button {
+  background-color: #2a7b3e;
+
+  padding: 8px;
+  border: none;
+  border-radius: 100px;
+}
+
+.bntConvite img {
+  height: 32px;
+  width: 37px;
+}
+
+.bntConvite p {
+  font: 20px "CenturyGothic", sans-serif;
+  font-weight: bold;
+  color: #0a3f17;
+}
 
 .abrir.oculto {
   display: none;
@@ -46,10 +63,13 @@ body:has(.ativo) {
 }
 
 .home.ativo {
+  position: relative;
+  background-color: #fafffc;
+
   opacity: 1;
+
   transform: none;
   transition: transform 0.8s, opacity 1.5s;
-  background-color: #fff;
 }
 
 .containerImgCasal {
@@ -57,12 +77,14 @@ body:has(.ativo) {
 }
 
 .beforeImg {
+  background: linear-gradient(to top, #fafffc, transparent);
   position: absolute;
-  bottom: 165px;
+  bottom: 3px;
   left: 0;
+
   width: 100%;
-  height: 240px;
-  background: linear-gradient(to top, #fff, transparent);
+  height: 180px;
+
   z-index: 200;
 }
 
@@ -70,13 +92,15 @@ body:has(.ativo) {
 .imgVersiculo {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+
+  padding-top: 30px;
 }
 
-.imgVersiculo p{
+.imgVersiculo p {
   width: 302px;
+
   line-height: 33px;
-  font-size: 24px;
+  font: 1rem "CenturyGothic", sans-serif;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.4px;
@@ -85,52 +109,95 @@ body:has(.ativo) {
 
 .nomes {
   padding-top: 20px;
-  padding-bottom: 150px;
+  padding-bottom: 80px;
+
+  font-size: 40px;
+  color: #0c890c;
+  text-align: center;
+}
+
+.c_textInformation {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+
+  padding-top: 39px;
+}
+
+.c_textInformation p:nth-child(2) {
+  padding-bottom: 7px;
+  padding-top: 17px;
+
+  font-size: 13px;
   color: #0a3f17;
   text-align: center;
+  font-family: "CenturyGothic", sans-serif;
 }
 
-.hora {
-  text-align: center;
-}
+.informationDate {
+  width: 66%;
 
-.hora p:first-child {
-  padding-bottom: 40px;
-  font-size: 1rem;
-  font-weight: 900;
-  color: #ffffff;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-}
-
-.hora p:last-child {
-  color: rgb(193, 247, 196);
-  background-color: #193b11;
+  color: #0a3f17;
   font: 2.5rem "HighSpirited", sans-serif;
-  border-radius: 5px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-align: center;
 }
 
 .links {
-  padding-top: 50px;
-  padding-bottom: 50px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  color: #000000;
+
+  padding-bottom: 50px;
+  padding-top: 40px;
+
+  font-family: "HighSpirited", sans-serif;
+  ;
+  color: #0a3f17;
 }
 
-.flex {
+.linkContents a {
   position: relative;
-  z-index: 1;
+
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 7px;
+
   text-align: center;
+
+  z-index: 1;
 }
 
-.flex p {
-  padding-top: 10px;
+.linkContents a>div>img {
+  height: 32px;
+  width: 32px;
+
+  border: 1px solid rgba(255, 255, 255, 0.27);
+  border-radius: 100px;
+  padding: 4px;
 }
+
+.linkContents a>div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #2a7b3e;
+  padding: 10px;
+  height: 30px;
+  width: 30px;
+
+  box-shadow: 3px 2px 5px 0px #00000046;
+  border-radius: 100px;
+}
+
+
 
 footer h3 {
   color: #000000;
@@ -140,52 +207,12 @@ footer h3 {
   text-align: center;
 }
 
+footer {
+  background-color: #fafffc;
+  padding: 10px 0;
+}
+
 .iconCOnvite {
   width: 70px;
   height: 70px;
-}
-
-/* Estilos para telas com largura máxima de 412px */
-@media (max-width: 412px) {
-
-  .abrir .nomes {
-    font-size: 74px;
-    /* Reduza o tamanho da fonte */
-  }
-
-  .abrir button {
-    font-size: 16px;
-    /* Reduza o tamanho da fonte do botão */
-  }
-
-  .hora p:first-child {
-    font-size: 0.8rem;
-    /* Reduza o tamanho da fonte do primeiro parágrafo da hora */
-  }
-
-  .hora p:last-child {
-    font-size: 1.6rem;
-    /* Reduza o tamanho da fonte do segundo parágrafo da hora */
-  }
-
-  .links {
-    padding-top: 10px;
-    /* Reduza o espaço superior */
-    padding-bottom: 10px;
-    /* Reduza o espaço inferior */
-    flex-direction: column;
-    /* Empilhe os links verticalmente */
-  }
-
-  .flex p {
-    padding-top: 5px;
-    /* Reduza o espaço superior entre os links */
-  }
-
-  .iconCOnvite {
-    width: 40px;
-    /* Reduza o tamanho do ícone do convite */
-    height: 40px;
-    /* Reduza o tamanho do ícone do convite */
-  }
 }
