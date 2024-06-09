@@ -29,49 +29,27 @@
     height: 130px;
   
   }
-
-.local-cerimonia{
-    padding: 90px 0;
-
+  #countdown {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    font-family: "CenturyGothic", sans-serif;
+
+    font-size: 20px;
+    color: #050505;
+}
+
+#countdown div {
     text-align: center;
-    
-    z-index: 10;
-}
-.local-cerimonia h2{
-    padding-bottom: 28px;
-
-    text-transform: uppercase;
-    font-family: "CenturyGothic", sans-serif;
-    color: #0a3f17;
-    font-weight: 900;
 }
 
-.local-cerimonia p {
-    color: #042f0f;
-    font-size: 16px;
-    font-family: "CenturyGothic", sans-serif;
+#countdown span {
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+    color: #045327; /* Altere para a cor desejada */
 }
 
-.local-cerimonia a{
-    padding-top: 10px;
+  
 
-    color: #0d2401;
-    font-weight: 400;
-    text-decoration: underline;
-}
-
-#logo{
-    padding-top: 40px;
-    padding-bottom: 200px;
-    
-}
-
-#presenca{
-    padding-top: 50px;
-    color: #0a3f17
-    ;
-
-}

@@ -36,7 +36,7 @@
     <div class="home">
         <div class="informacoes">
             <div class="containerImgCasal">
-                <img class="imgCasal" src="./img/parceiros-de-visao-lateral-de-maos-dadas.jpg" alt="">
+                <img class="imgCasal" src="./img/fotoInicial.jpeg" alt="">
 
                 <span class="beforeImg"></span>
 
@@ -52,6 +52,15 @@
                 <p class="informationDate">03 de Agosto de 2024, às 15:00h</p>
             </div>
 
+
+            <div id="countdown">
+                <div><span id="days"></span>Dias</div>
+                <div><span id="hours"></span>Horas</div>
+                <div><span id="minutes"></span>Min</div>
+                <div><span id="seconds"></span>Seg</div>
+            </div>
+
+            
             <div class="links font-1-400-s">
                 <div class="local linkContents">
                     <a href="https://goo.gl/maps/skk9x8KArD7WVnvh9" target="_blank">
@@ -64,7 +73,7 @@
                 </div>
 
                 <div class="confirmar linkContents">
-                    <a href="https://api.whatsapp.com/send?phone=5531988625269&text=Ol%C3%A1%2C%20presen%C3%A7a%20confirmada!"
+                    <a href="https://noivos.casar.com/samuel-thais#/one-page/_start"
                         target="_blank">
                         <div>
                             <img src="./img/aceitar.png" alt="icon-local">
@@ -75,7 +84,7 @@
                 </div>
 
                 <div class="lista linkContents">
-                    <a href="" target="_blank">
+                    <a href="https://noivos.casar.com/samuel-thais#/one-page/_start" target="_blank">
                         <div>
                             <img src="./img/caixa-de-presente.png" alt="icon-local">
                         </div>
@@ -87,24 +96,14 @@
         </div>
     </div>
     <div class="conteudo" id="local">
-        <div class="local-cerimonia">
-            <h2 class="font-1-400-m">Local da cerimônia </h2>
-            <p class="size">R. Maria Alvarenga Magalhães, 152 - Central Park</p>
-            <p class="size">Vespasiano - MG</p>
-            <a class="size" href="https://goo.gl/maps/skk9x8KArD7WVnvh9" target="_blank">clique aqui para ver o
-                trajeto!</a>
-            <p class="size-b" id="presenca">Contamos com sua presença!!</p>
-        </div>
-        <!-- <img src="img/logoCasamento2.png" id="logo"> -->
+       
+         <img src="img/fotoFinal.jpeg" id="logo"> 
     </div>
     <audio src="audio/musica.mp3" id="audio">
 
     </audio>
 
-    <footer>
-        <h3> Site desenvolvido por RG</h3>
-        <font-awesome-icon :icon="['fal', 'copyright']" spin size="2xl" />
-    </footer>
+  
 
 </body>
 <script>
@@ -127,6 +126,28 @@
         home.classList.add("ativo");
     }
 
+     // Contagem regressiva
+     const weddingDate = new Date('August 3, 2024 15:00:00').getTime();
+
+const countdownFunction = setInterval(function () {
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+    if (distance < 0) {
+        clearInterval(countdownFunction);
+        document.getElementById("countdown").innerHTML = "O grande dia chegou!";
+    }
+}, 1000);
 
 </script>
 <script src="simple-anime.js"></script>
